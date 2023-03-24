@@ -4,7 +4,7 @@ import 'number_converter.dart';
 
 class Calculator {
   static Fraction calculate(String number1, String number2, String operation) {
-    Fraction result = Fraction.new(0, 1);
+    Fraction result = Fraction(0, 1);
     switch (operation) {
       case "+":
         result = add(number1, number2);

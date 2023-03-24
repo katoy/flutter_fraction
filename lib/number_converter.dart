@@ -137,10 +137,7 @@ class NumberConverter {
       result += decimalPart.join();
     } else {
       int index = remainderPositions[remainder]!;
-      result += decimalPart.sublist(0, index).join() +
-          '(' +
-          decimalPart.sublist(index).join() +
-          ')';
+      result += '${decimalPart.sublist(0, index).join()}(${decimalPart.sublist(index).join()})';
     }
 
     return result;
@@ -196,7 +193,7 @@ class NumberConverter {
       String repeatingPart = result.substring(start);
       return nonRepeatingPart.isEmpty
           ? repeatingPart
-          : nonRepeatingPart + "(" + repeatingPart + ")";
+          : "$nonRepeatingPart($repeatingPart)";
     } else {
       return ""; // No recurring pattern found
     }

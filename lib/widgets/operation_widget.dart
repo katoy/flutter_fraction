@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class OperationWidget extends StatefulWidget {
   final Function(String) onOperationSelected;
 
-  OperationWidget({Key? key, required this.onOperationSelected})
+  const OperationWidget({Key? key, required this.onOperationSelected})
       : super(key: key);
 
   @override
-  _OperationWidgetState createState() => _OperationWidgetState();
+  OperationWidgetState createState() => OperationWidgetState();
 }
 
-class _OperationWidgetState extends State<OperationWidget> {
+class OperationWidgetState extends State<OperationWidget> {
   String _selectedOperation = "+";
 
   @override

@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class NumberInputWidget extends StatefulWidget {
   final void Function(int index, String value) onNumberChanged;
 
-  NumberInputWidget({Key? key, required this.onNumberChanged}) : super(key: key);
+  const NumberInputWidget({Key? key, required this.onNumberChanged}) : super(key: key);
 
   @override
-  _NumberInputWidgetState createState() => _NumberInputWidgetState();
+  NumberInputWidgetState createState() => NumberInputWidgetState();
 }
 
-class _NumberInputWidgetState extends State<NumberInputWidget> {
-  TextEditingController _numberController1 = TextEditingController();
-  TextEditingController _numberController2 = TextEditingController();
+class NumberInputWidgetState extends State<NumberInputWidget> {
+  final TextEditingController _numberController1 = TextEditingController();
+  final TextEditingController _numberController2 = TextEditingController();
 
   @override
   void initState() {
@@ -31,19 +31,19 @@ class _NumberInputWidgetState extends State<NumberInputWidget> {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.only(left: 16.0),
+          padding: const EdgeInsets.only(left: 16.0),
           child: TextField(
             controller: _numberController1,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Number 1',
             ),
           )
         ),
         Container(
-          padding: EdgeInsets.only(left: 16.0), // Add this line to set left margin
+          padding: const EdgeInsets.only(left: 16.0), // Add this line to set left margin
           child: TextField(
             controller: _numberController2,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Number 2',
             ),
           ),

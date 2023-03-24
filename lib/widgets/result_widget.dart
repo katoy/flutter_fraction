@@ -4,14 +4,14 @@ class ResultWidget extends StatefulWidget {
   final String resultFraction;
   final String resultRecurringDecimal;
 
-  ResultWidget({Key? key, required this.resultFraction, required this.resultRecurringDecimal})
+  const ResultWidget({Key? key, required this.resultFraction, required this.resultRecurringDecimal})
       : super(key: key);
 
   @override
-  _ResultWidgetState createState() => _ResultWidgetState();
+  ResultWidgetState createState() => ResultWidgetState();
 }
 
-class _ResultWidgetState extends State<ResultWidget> {
+class ResultWidgetState extends State<ResultWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(

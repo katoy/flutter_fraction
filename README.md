@@ -22,3 +22,12 @@ lib/widgets/result_widget.dart
 １つのファイルの行数が50行を超える場合は、50行程度ごとに分割して表示してください。
 最初は先頭部分を表示します。"次の表示" と質問したら、次の部分を表示してください。
 ```
+
+## スクレーンショット
+![1 / 3](screenshots/1_3.png)
+![1 / 7](screenshots/1_7.png)
+![1 / 2773](screenshots/1_2773.png)
+## 参考
+
+* <http://tsujimotter.info/works/cyclic/list.html>
+1/pk型の循環小数表や電卓がある。

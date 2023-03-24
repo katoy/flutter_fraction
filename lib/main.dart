@@ -8,10 +8,12 @@ import 'widgets/operation_widget.dart';
 import 'widgets/result_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,21 +21,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Fraction and Recurring Decimal Calculator'),
+      home: const MyHomePage(title: 'Fraction and Recurring Decimal Calculator'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   String _number1 = '';
   String _number2 = '';
   String _selectedOperation = "*";
@@ -82,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: _calculateResult,
-              child: Text('Calculate'),
+              child: const Text('Calculate'),
             ),
             ResultWidget(
               resultFraction: _resultFraction,
